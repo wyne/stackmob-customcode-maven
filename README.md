@@ -60,9 +60,8 @@ StackMobCommon.getStackMobInstance().get("hello_world", new StackMobCallback() {
 
 Building:
 
-1. cd java
-2. mvn clean package
-3. JAR is located in java/target
+1. mvn clean package
+2. JAR is located in target
 
 ### Deploying
 
