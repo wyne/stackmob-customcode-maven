@@ -16,15 +16,21 @@
 
 package com.stackmob.example
 
-import com.stackmob.core.jar.JarEntryObject
 import com.stackmob.core.customcode.CustomCodeMethod
+import com.stackmob.sdkapi.SDKServiceProvider
+import com.stackmob.core.rest.{ResponseToProcess, ProcessedAPIRequest}
 import java.util.{List => JList}
+import java.net.HttpURLConnection
 import scala.collection.JavaConverters._
 
-class EntryPointExtender extends JarEntryObject {
+class NoParam extends CustomCodeMethod {
 
-  override def methods(): JList[CustomCodeMethod] = {
-    ((new HelloWorld) :: (new NoParam) :: Nil).asJava
+  override def getMethodName: String = "no_param"
+
+  override def getParams: JList[String] = List[String]().asJava
+
+  override def execute(request: ProcessedAPIRequest, serviceProvider: SDKServiceProvider): ResponseToProcess = {
+    new ResponseToProcess(HttpURLConnection.HTTP_OK, Map("msg" -> request.getLoggedInUser, "verb" -> request.getVerb.toString, "params" -> request.getParams).asJava)
   }
 
 }
