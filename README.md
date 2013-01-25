@@ -66,3 +66,4 @@ Building:
 ### Deploying
 
 To deploy your Custom Code, first link your github repo with StackMob by authorizing StackMob <a href="https://www.stackmob.com/platform/api/customcode/upload/github">here</a>. Then follow the provided instructions to configure the deploy hook on GitHub. After that just 'push' to your 'master' branch and your code will be built and deployed seamlessly to the StackMob platform. Your code is only automatically deployed in the Development environment. You retain control when you want to manually deploy to Production. You can also see a <a href="https://www.stackmob.com/platform/api/customcode/history">history</a> of your deployments.
+
