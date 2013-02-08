@@ -30,7 +30,7 @@ class HelloWorld extends CustomCodeMethod {
   override def getParams: JList[String] = List[String]().asJava
 
   override def execute(request: ProcessedAPIRequest, serviceProvider: SDKServiceProvider): ResponseToProcess = {
-    new ResponseToProcess(HttpURLConnection.HTTP_OK, Map("msg" -> request.getLoggedInUser, "verb" -> request.getVerb.toString, "params" -> request.getParams).asJava)
+    new ResponseToProcess(HttpURLConnection.HTTP_OK, Map("loggedInUser" -> request.getLoggedInUser, "verb" -> request.getVerb.toString, "params" -> request.getParams).asJava)
   }
 
 }
