@@ -6,7 +6,9 @@ This example project is a simple Hello World.  This adds a server-side method ca
     
 Custom code allows you to even define the returned JSON.  In this case, our simple Hello World example will return:
 
+```
     { "msg": "Hello, world!" }
+```
     
 You can call your server-side custom code from your SDK.  The request will be sent from the client, StackMob will route the call to the appropriate code and execute the code you've written, then StackMob will return the JSON you've defined.
 
