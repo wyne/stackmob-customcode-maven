@@ -58,6 +58,7 @@ StackMobCommon.getStackMobInstance().get("hello_world", new StackMobCallback() {
   });
 </script>
 ```
+
 <span class="tab"/>
 
 ### Java (Maven)
