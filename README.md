@@ -40,6 +40,7 @@ StackMobCommon.getStackMobInstance().get("hello_world", new StackMobCallback() {
     }
 });
 ```
+
 <span class="tab"/>
 
 <span class="tab callcc" title="JS SDK"/>
